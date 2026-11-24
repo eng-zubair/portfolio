@@ -6,7 +6,7 @@ import {
   Check, Code2, Download, Github, Globe2, Linkedin, Mail, MapPin,
   Menu, MessageCircle, MoveUpRight, Phone, Sparkles, X,
 } from 'lucide-react'
-import { experience, profile, projects, skills, training } from './data'
+import { caseStudy, experience, profile, projects, skills, training } from './data'
 import './index.css'
 
 const fadeUp = {
@@ -65,6 +65,7 @@ function Hero() {
           <a className="button button-dark" href="#work">Explore my work <ArrowDownRight size={17} /></a>
           <a className="text-link" href="/Zubair_Ahmad_Chohan_CV.pdf" download>Download CV <Download size={15} /></a>
         </div></Reveal>
+        <Reveal delay={0.24}><a className="hero-live" href={`tel:${caseStudy.liveDemo.tel}`}><i aria-hidden="true" /><span>LIVE</span> Call my AI receptionist: <strong>{caseStudy.liveDemo.display}</strong></a></Reveal>
         <Reveal delay={0.28}><div className="hero-meta"><span><MapPin size={14} /> Lahore, Pakistan</span><span className="meta-separator" /><span><Code2 size={14} /> Freelance since March 2023</span></div></Reveal>
       </div>
       <Reveal className="hero-visual" delay={0.18}>
@@ -107,16 +108,54 @@ function Projects() {
     <div className="project-grid">{projects.map((project, i) => <Reveal key={project.name} delay={i * 0.1}><article className="project-card">
       <a className={`project-art project-art-${project.color}`} href={project.url} target="_blank" rel="noreferrer" aria-label={`Visit ${project.name}`}>
         <div className="project-art-top"><span>{project.number} / SELECTED PROJECT</span><span className="project-open"><ArrowUpRight size={18} /></span></div>
-        <div className={`project-glyph glyph-${project.color}`}><span>{project.mark}</span><i /><i /><i /></div>
-        <div className="project-art-bottom"><span>PRODUCT<br />IN PROGRESS</span><Globe2 size={17} /></div>
+        {project.image
+          ? <img className="project-shot" src={project.image.src} width={project.image.width} height={project.image.height} alt={project.image.alt} loading="lazy" />
+          : <><div className={`project-glyph glyph-${project.color}`}><span>{project.mark}</span><i /><i /><i /></div>
+            <div className="project-art-bottom"><span>PRODUCT<br />IN PROGRESS</span><Globe2 size={17} /></div></>}
       </a>
       <div className="project-info"><div><span className="project-type">{project.type}</span><h3><a href={project.url} target="_blank" rel="noreferrer">{project.name}<ArrowUpRight size={18} /></a></h3></div><span className="project-scope">{project.scope}</span></div>
       <p className="project-description">{project.description}</p>
       {project.stack && <ul className="project-stack" aria-label="Tech stack">{project.stack.map((s) => <li key={s}>{s}</li>)}</ul>}
       <div className="project-divider"><span>CLIENT COLLABORATION</span><span>↗</span></div>
     </article></Reveal>)}</div>
+    <CaseStudy />
     <Reveal><div className="work-note"><span className="note-star">✳</span><p>Thoughtful products begin with a simple question:<br /><em>what would make this easier for someone?</em></p></div></Reveal>
   </div></section>
+}
+
+function CaseStudy() {
+  const c = caseStudy
+  return <section className="case-study" aria-labelledby="case-title">
+    <Reveal className="case-head">
+      <Eyebrow>CASE STUDY · {c.name.toUpperCase()}</Eyebrow>
+      <h3 id="case-title">From missed calls<br /><span className="serif-accent">to booked jobs.</span></h3>
+    </Reveal>
+    <div className="case-grid">
+      <Reveal className="case-story">
+        <dl>
+          <div><dt>THE PROBLEM</dt><dd>{c.problem}</dd></div>
+          <div><dt>THE SOLUTION</dt><dd>{c.solution}</dd></div>
+          <div><dt>WHAT I BUILT</dt><dd>{c.built}</dd></div>
+        </dl>
+        <ol className="case-steps">{c.steps.map(([title, text], i) => <li key={title}><span>0{i + 1}</span><div><strong>{title}</strong><p>{text}</p></div></li>)}</ol>
+      </Reveal>
+      <Reveal className="live-call" delay={0.1}>
+        <span className="live-badge"><i /> LIVE DEMO</span>
+        <h4>Call the AI receptionist yourself.</h4>
+        <p>Ring <strong>{c.liveDemo.label}</strong> — a demo business answered by CallSharp. Ask for a quote, describe a leak, try to book a visit.</p>
+        <a className="live-number" href={`tel:${c.liveDemo.tel}`}><Phone size={20} />{c.liveDemo.display}</a>
+        <small>US toll-free number. Calling from outside the US may cost extra — or ask me for a live walkthrough on WhatsApp.</small>
+        <a className="live-whatsapp" href={profile.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={16} />Book a walkthrough</a>
+      </Reveal>
+    </div>
+    <div className="case-gallery">{c.shots.map((shot, i) => <Reveal key={shot.src} delay={i * 0.08}><figure>
+      <a className="browser-frame" href={shot.src} target="_blank" rel="noreferrer" aria-label={`Open full screenshot: ${shot.alt}`}>
+        <span className="browser-bar" aria-hidden="true"><i /><i /><i /></span>
+        <img src={shot.src} width={shot.width} height={shot.height} alt={shot.alt} loading="lazy" />
+      </a>
+      <figcaption>{shot.caption}</figcaption>
+    </figure></Reveal>)}</div>
+  </section>
 }
 
 function Skills() {

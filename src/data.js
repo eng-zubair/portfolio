@@ -16,6 +16,7 @@ export const projects = [
     type: 'VOICE AI RECEPTIONIST · SAAS',
     description: 'An AI voice receptionist that answers business calls around the clock, understands what callers need and helps book the work.',
     stack: ['Vapi', 'GPT-4o-mini', 'Twilio'],
+    image: { src: '/work/callsharp-landing.jpg', width: 770, height: 545, alt: 'CallSharp landing page: Every call answered. Every job captured.' },
     scope: 'Client project · United States',
     mark: 'C',
     color: 'violet',
@@ -25,7 +26,9 @@ export const projects = [
     number: '02',
     name: 'Sanatzar.cloud',
     type: 'MULTI-VENDOR · E-COMMERCE',
-    description: 'A marketplace experience bringing vendors, products, orders and delivery tracking together.',
+    description: 'A multi-vendor marketplace for Punjab’s GI-certified handicrafts — artisan stores, district-wise catalogue, cart, wishlist and compare, orders and delivery tracking.',
+    stack: ['React.js', 'Tailwind CSS', 'Node.js', 'PostgreSQL'],
+    image: { src: '/work/sanatzar-home.jpg', width: 1100, height: 659, alt: 'Sanatzar homepage: Discover Punjab’s Authentic Handicrafts' },
     scope: 'Client project · Pakistan',
     mark: 'S',
     color: 'lime',
@@ -33,9 +36,27 @@ export const projects = [
   },
 ]
 
+export const caseStudy = {
+  name: 'CallSharp.ai',
+  problem: 'Plumbers, electricians and HVAC crews are on the job when the phone rings — and most customers hire whoever picks up first.',
+  solution: 'CallSharp answers every call 24/7, understands the job, books it straight into the calendar and alerts the business by SMS and email.',
+  built: 'The voice agent (Vapi + GPT-4o-mini), the phone line (Twilio), the booking flow, SMS and email alerts, and the business dashboard with recordings, AI summaries and transcripts.',
+  steps: [
+    ['Answers instantly', 'Picks up every call within seconds, day or night. No voicemail.'],
+    ['Qualifies the job', 'Asks the right questions to understand the problem and urgency.'],
+    ['Books the visit', 'Checks the service area and books a time while the caller is on the line.'],
+    ['Logs & alerts', 'Saves the recording, transcript and AI summary, then notifies the owner.'],
+  ],
+  liveDemo: { label: 'Mike’s Plumbing', display: '+1 (855) 910-1334', tel: '+18559101334' },
+  shots: [
+    { src: '/work/callsharp-dashboard.jpg', width: 1400, height: 1240, alt: 'CallSharp business dashboard showing calls, appointments, minutes and SMS usage', caption: 'Business dashboard — calls, bookings, minutes and SMS at a glance.' },
+    { src: '/work/callsharp-call-detail.jpg', width: 1300, height: 1445, alt: 'A CallSharp call record with AI summary, transcript and the booked appointment', caption: 'Every call — AI summary, full transcript and the booked appointment. Personal details hidden.' },
+  ],
+}
+
 export const skills = [
   'Voice AI agents (Vapi)', 'OpenAI GPT-4o-mini', 'Twilio', 'React.js', 'Next.js', 'JavaScript',
-  'React Hooks', 'Redux', 'React Router', 'HTML5 & CSS3', 'CSS Grid & Flexbox', 'Responsive design',
+  'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Redux', 'React Router', 'HTML5 & CSS3', 'Responsive design',
 ]
 
 export const experience = [
