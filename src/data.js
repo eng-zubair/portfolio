@@ -62,30 +62,37 @@ export const skills = [
 export const experience = [
   {
     period: 'MAR 2023 — NOW',
-    role: 'Freelance Web Developer',
-    company: 'Independent · Client projects',
-    description: 'Building AI voice agents and web products for clients — including CallSharp.ai, an AI receptionist built with Vapi, GPT-4o-mini and Twilio.',
+    role: 'Freelance AI Product Engineer',
+    company: 'Independent · Client projects in the US and Pakistan',
+    description: 'Designing and building AI voice agents and full-stack web products for clients — from the first conversation to a live product.',
     current: true,
+    highlights: [
+      { title: 'CallSharp.ai', href: '#work', text: 'AI voice receptionist that answers calls, qualifies jobs and books appointments.', tags: 'Vapi · GPT-4o-mini · Twilio' },
+      { title: 'Sanatzar.cloud', href: '#work', text: 'Multi-vendor marketplace for Punjab’s GI-certified handicrafts.', tags: 'React.js · Node.js · PostgreSQL' },
+      { title: 'Client web apps', text: 'Responsive interfaces and features shaped around real client requirements.', tags: 'React.js · Next.js · Tailwind CSS' },
+    ],
   },
   {
     period: 'JAN 2014 — NOV 2023',
     role: 'Financial Advisor',
     company: 'Dar Alliance',
-    description: 'Supported client-facing financial services and day-to-day advisory responsibilities.',
+    description: 'Client-facing financial advisory.',
   },
   {
     period: 'OCT 2010 — DEC 2013',
     role: 'Network Operations Support Engineer',
     company: 'Bank Alfalah · IT Data Center, Lahore',
-    description: 'Supported branch WAN and LAN operations, tracked incidents, coordinated with vendors, and maintained infrastructure records.',
+    description: 'Branch WAN/LAN operations, incidents and vendor coordination.',
   },
   {
     period: 'JAN 2006 — OCT 2010',
     role: 'Operations Support Engineer',
     company: 'Opera Textile Mills · Lahore',
-    description: 'Maintained business software and operational records, supported computer systems, and coordinated office operations.',
+    description: 'Business software, systems support and office operations.',
   },
 ]
+
+export const earlierCareerIntro = '17 years across IT operations, banking networks and financial advisory — which is why I build products around real business problems, not just screens.'
 
 export const training = [
   ['2024', 'Advanced Web Development', 'React.js, Hooks, Redux, React Router & Next.js · Udemy'],

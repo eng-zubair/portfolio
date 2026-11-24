@@ -6,7 +6,7 @@ import {
   Check, Code2, Download, Github, Globe2, Linkedin, Mail, MapPin,
   Menu, MessageCircle, MoveUpRight, Phone, Sparkles, X,
 } from 'lucide-react'
-import { caseStudy, experience, profile, projects, skills, training } from './data'
+import { caseStudy, earlierCareerIntro, experience, profile, projects, skills, training } from './data'
 import AiReceptionistDemo from './AiReceptionistDemo'
 import './index.css'
 
@@ -160,9 +160,36 @@ function Skills() {
 function Experience() {
   return <section className="experience-section" id="experience"><div className="section-wrap experience-inner">
     <Reveal><SectionHeading index="04" eyebrow="THE ROAD SO FAR" title={<>A career built<br /><span className="serif-accent">on adaptability.</span></>} detail="Different industries. A shared thread: solving problems and supporting people." /></Reveal>
-    <div className="experience-list">{experience.map((job, i) => <Reveal key={job.role} delay={i * 0.04}><article className={`experience-item ${job.current ? 'experience-current' : ''}`}>
-      <div className="experience-period"><span className="timeline-dot" />{job.period}</div><div className="experience-main"><div className="experience-title"><h3>{job.role}</h3>{job.current && <span className="current-pill"><i /> CURRENT</span>}</div><span className="experience-company">{job.company}</span><p>{job.description}</p></div><span className="experience-number">0{i + 1}</span>
-    </article></Reveal>)}</div>
+    {(() => {
+      const [current, ...earlier] = experience
+      return <>
+        <Reveal><article className="exp-featured">
+          <div className="exp-featured-head">
+            <div className="experience-period"><span className="timeline-dot" />{current.period}</div>
+            <span className="current-pill"><i /> CURRENT</span>
+          </div>
+          <h3>{current.role}</h3>
+          <span className="experience-company">{current.company}</span>
+          <p>{current.description}</p>
+          <ul className="exp-highlights">{current.highlights.map((h) => <li key={h.title}>
+            {h.href ? <a href={h.href}><strong>{h.title}</strong><ArrowUpRight size={14} /></a> : <strong>{h.title}</strong>}
+            <p>{h.text}</p>
+            <span>{h.tags}</span>
+          </li>)}</ul>
+        </article></Reveal>
+        <Reveal delay={0.08}><div className="exp-earlier">
+          <div className="exp-earlier-head">
+            <span className="aside-label">EARLIER CAREER · 2006 — 2023</span>
+            <p>{earlierCareerIntro}</p>
+          </div>
+          <ul>{earlier.map((job) => <li key={job.role}>
+            <span className="exp-earlier-period">{job.period}</span>
+            <div><strong>{job.role}</strong><span>{job.company}</span></div>
+            <p>{job.description}</p>
+          </li>)}</ul>
+        </div></Reveal>
+      </>
+    })()}
   </div></section>
 }
 
