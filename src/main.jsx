@@ -7,6 +7,7 @@ import {
   Menu, MessageCircle, MoveUpRight, Phone, Sparkles, X,
 } from 'lucide-react'
 import { caseStudy, experience, profile, projects, skills, training } from './data'
+import AiReceptionistDemo from './AiReceptionistDemo'
 import './index.css'
 
 const fadeUp = {
@@ -69,15 +70,7 @@ function Hero() {
         <Reveal delay={0.28}><div className="hero-meta"><span><MapPin size={14} /> Lahore, Pakistan</span><span className="meta-separator" /><span><Code2 size={14} /> Freelance since March 2023</span></div></Reveal>
       </div>
       <Reveal className="hero-visual" delay={0.18}>
-        <div className="hero-art" aria-label="Abstract green and ink geometric artwork">
-          <div className="art-orbit art-orbit-one" /><div className="art-orbit art-orbit-two" />
-          <div className="art-sun" /><div className="art-capsule" /><div className="art-arc" />
-          <div className="art-grid" />
-          <div className="art-index">LAHORE · PK <span>31.5204° N</span></div>
-          <div className="art-caption"><span>GOOD IDEAS<br />DESERVE GOOD<br />EXECUTION.</span><ArrowUpRight size={20} /></div>
-          <div className="art-monogram">Z<span>.</span></div>
-        </div>
-        <div className="visual-foot"><span>DESIGN MINDED. ENGINEERING LED.</span><span>AI · VOICE · WEB</span></div>
+        <AiReceptionistDemo liveDemo={caseStudy.liveDemo} />
       </Reveal>
     </div>
     <a className="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><ArrowDown size={14} /></a>
