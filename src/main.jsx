@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import { caseStudy, earlierCareerIntro, experience, profile, projects, skills, training } from './data'
 import AiReceptionistDemo from './AiReceptionistDemo'
+import ChatWidget from './ChatWidget'
 import './index.css'
 
 const fadeUp = {
@@ -205,12 +206,8 @@ function Contact() {
   </footer>
 }
 
-function WhatsAppButton() {
-  return <a className="whatsapp-float" href={profile.whatsapp} target="_blank" rel="noreferrer" aria-label="Chat with Zubair on WhatsApp"><MessageCircle size={20} /><span>WhatsApp</span></a>
-}
-
 function App() {
-  return <><Header /><main><Hero /><Marquee /><About /><Projects /><Skills /><Experience /><Education /></main><Contact /><WhatsAppButton /></>
+  return <><Header /><main><Hero /><Marquee /><About /><Projects /><Skills /><Experience /><Education /></main><Contact /><ChatWidget /></>
 }
 
 createRoot(document.getElementById('root')).render(<React.StrictMode><App /></React.StrictMode>)
