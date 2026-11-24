@@ -1,7 +1,7 @@
 node_modules/
 dist/
-outputs/
-work/
+/outputs/
+/work/
 .env
 .env.*
 *.log
