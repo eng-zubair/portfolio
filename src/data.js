@@ -1,9 +1,10 @@
 export const profile = {
   name: 'Zubair Ahmad Chohan',
-  role: 'Web Developer',
+  role: 'AI Product Engineer',
   location: 'Lahore, Pakistan',
   email: 'zachohan85@gmail.com',
   phone: '+92 300 4413332',
+  whatsapp: 'https://wa.me/923004413332?text=' + encodeURIComponent('Hi Zubair, I saw your portfolio and would like to discuss a project.'),
   linkedin: 'https://www.linkedin.com/in/zubair-ahmad-02abbb186',
   github: 'https://github.com/eng-zubair',
 }
@@ -12,8 +13,9 @@ export const projects = [
   {
     number: '01',
     name: 'CallSharp.ai',
-    type: 'AI RECEPTIONIST · SAAS',
-    description: 'An AI-powered receptionist platform designed to make call handling feel effortless for businesses.',
+    type: 'VOICE AI RECEPTIONIST · SAAS',
+    description: 'An AI voice receptionist that answers business calls around the clock, understands what callers need and helps book the work.',
+    stack: ['Vapi', 'GPT-4o-mini', 'Twilio'],
     scope: 'Client project · United States',
     mark: 'C',
     color: 'violet',
@@ -32,8 +34,8 @@ export const projects = [
 ]
 
 export const skills = [
-  'React.js', 'Next.js', 'JavaScript', 'HTML5', 'CSS3', 'React Hooks', 'Redux',
-  'React Router', 'CSS Grid', 'Flexbox', 'LAN / WAN', 'System troubleshooting',
+  'Voice AI agents (Vapi)', 'OpenAI GPT-4o-mini', 'Twilio', 'React.js', 'Next.js', 'JavaScript',
+  'React Hooks', 'Redux', 'React Router', 'HTML5 & CSS3', 'CSS Grid & Flexbox', 'Responsive design',
 ]
 
 export const experience = [
@@ -41,7 +43,7 @@ export const experience = [
     period: 'MAR 2023 — NOW',
     role: 'Freelance Web Developer',
     company: 'Independent · Client projects',
-    description: 'Building and maintaining practical web products, from responsive interfaces to features shaped around real client requirements.',
+    description: 'Building AI voice agents and web products for clients — including CallSharp.ai, an AI receptionist built with Vapi, GPT-4o-mini and Twilio.',
     current: true,
   },
   {
