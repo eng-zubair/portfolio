@@ -1,6 +1,6 @@
 import React from 'react'
 import { useReducedMotion } from 'framer-motion'
-import { CalendarCheck, Check, PhoneCall, RotateCcw, Volume2, VolumeX } from 'lucide-react'
+import { CalendarCheck, Check, Phone, PhoneCall, RotateCcw, Volume2, VolumeX } from 'lucide-react'
 import { demoScenarios } from './demoScripts'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -157,7 +157,7 @@ export default function AiReceptionistDemo({ liveDemo }) {
 
   return <div className="demo" ref={rootRef} role="region" aria-label="Scripted demo of an AI receptionist answering a phone call">
     <div className="demo-head">
-      <span className="demo-label"><i aria-hidden="true" />AI RECEPTIONIST · DEMO</span>
+      <span className="demo-label"><i aria-hidden="true" />AI RECEPTIONIST · IN ACTION</span>
       <div className="demo-controls">
         {speechOk && <button type="button" onClick={() => setSound((s) => !s)} aria-pressed={sound} aria-label={sound ? 'Mute voice' : 'Play with voice'} title={sound ? 'Mute voice' : 'Play with voice'}>{sound ? <Volume2 size={16} /> : <VolumeX size={16} />}</button>}
         <button type="button" onClick={replay} aria-label="Replay this call" title="Replay"><RotateCcw size={15} /></button>
@@ -201,6 +201,9 @@ export default function AiReceptionistDemo({ liveDemo }) {
       </div>)}</dl>
     </div>
 
-    <p className="demo-note">Scripted replay · <a href={`tel:${liveDemo.tel}`}>hear a real call: {liveDemo.display}</a></p>
+    <div className="demo-note">
+      <span>Scripted replay</span>
+      <a href={`tel:${liveDemo.tel}`}><Phone size={15} aria-hidden="true" /><span>Hear the real one: <strong>{liveDemo.display}</strong></span></a>
+    </div>
   </div>
 }
