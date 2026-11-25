@@ -17,7 +17,7 @@ export const suggestedQuestions = [
   },
   {
     q: 'What’s your tech stack?',
-    a: 'Voice AI: Vapi, OpenAI GPT-4o-mini and Twilio.\nWeb: React.js, Next.js and Tailwind CSS.\nBackend: Node.js and PostgreSQL.\n\nCallSharp runs on the voice stack; Sanatzar.cloud, a multi-vendor marketplace, runs on React, Node.js and PostgreSQL.',
+    a: 'Voice AI: Vapi, OpenAI GPT-4o-mini and Twilio.\nWeb: React, Next.js, TypeScript and Tailwind CSS.\nBackend: Node.js, Express, PostgreSQL, Supabase and Drizzle ORM.\nPayments & email: Stripe and Resend.\n\nCallSharp.ai is a Next.js + TypeScript app on Supabase, with Vapi, GPT-4o-mini and Twilio for calls, Stripe for billing and Resend for email. Sanatzar.cloud, a multi-vendor marketplace, runs on React + Vite with an Express API, PostgreSQL and Drizzle ORM.',
   },
   {
     q: 'How much does a project cost?',

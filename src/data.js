@@ -15,7 +15,7 @@ export const projects = [
     name: 'CallSharp.ai',
     type: 'VOICE AI RECEPTIONIST · SAAS',
     description: 'An AI voice receptionist that answers business calls around the clock, understands what callers need and helps book the work.',
-    stack: ['Vapi', 'GPT-4o-mini', 'Twilio'],
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Vapi', 'OpenAI GPT-4o-mini', 'Twilio', 'Stripe', 'Resend', 'Upstash Redis', 'Sentry'],
     image: { src: '/work/callsharp-landing.jpg', width: 770, height: 545, alt: 'CallSharp landing page: Every call answered. Every job captured.' },
     scope: 'Client project · United States',
     mark: 'C',
@@ -27,7 +27,7 @@ export const projects = [
     name: 'Sanatzar.cloud',
     type: 'MULTI-VENDOR · E-COMMERCE',
     description: 'A multi-vendor marketplace for Punjab’s GI-certified handicrafts — artisan stores, district-wise catalogue, cart, wishlist and compare, orders and delivery tracking.',
-    stack: ['React.js', 'Tailwind CSS', 'Node.js', 'PostgreSQL'],
+    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Radix UI', 'TanStack Query', 'Node.js', 'Express', 'PostgreSQL', 'Drizzle ORM', 'Passport.js'],
     image: { src: '/work/sanatzar-home.jpg', width: 1100, height: 659, alt: 'Sanatzar homepage: Discover Punjab’s Authentic Handicrafts' },
     scope: 'Client project · Pakistan',
     mark: 'S',
@@ -40,7 +40,7 @@ export const caseStudy = {
   name: 'CallSharp.ai',
   problem: 'Plumbers, electricians and HVAC crews are on the job when the phone rings — and most customers hire whoever picks up first.',
   solution: 'CallSharp answers every call 24/7, understands the job, books it straight into the calendar and alerts the business by SMS and email.',
-  built: 'The voice agent (Vapi + GPT-4o-mini), the phone line (Twilio), the booking flow, SMS and email alerts, and the business dashboard with recordings, AI summaries and transcripts.',
+  built: 'The voice agent (Vapi + GPT-4o-mini), the phone line (Twilio), the booking flow, SMS and email alerts (Twilio + Resend), Stripe billing, and the business dashboard with recordings, AI summaries and transcripts — a Next.js + TypeScript app on Supabase.',
   steps: [
     ['Answers instantly', 'Picks up every call within seconds, day or night. No voicemail.'],
     ['Qualifies the job', 'Asks the right questions to understand the problem and urgency.'],
@@ -55,8 +55,9 @@ export const caseStudy = {
 }
 
 export const skills = [
-  'Voice AI agents (Vapi)', 'OpenAI GPT-4o-mini', 'Twilio', 'React.js', 'Next.js', 'JavaScript',
-  'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Redux', 'React Router', 'HTML5 & CSS3', 'Responsive design',
+  'Voice AI agents (Vapi)', 'OpenAI GPT-4o-mini', 'Twilio', 'React.js', 'Next.js', 'TypeScript', 'JavaScript',
+  'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'Drizzle ORM', 'Stripe', 'Tailwind CSS', 'Redux', 'React Router',
+  'HTML5 & CSS3', 'Responsive design',
 ]
 
 export const experience = [
@@ -67,8 +68,8 @@ export const experience = [
     description: 'Designing and building AI voice agents and full-stack web products for clients — from the first conversation to a live product.',
     current: true,
     highlights: [
-      { title: 'CallSharp.ai', href: '#work', text: 'AI voice receptionist that answers calls, qualifies jobs and books appointments.', tags: 'Vapi · GPT-4o-mini · Twilio' },
-      { title: 'Sanatzar.cloud', href: '#work', text: 'Multi-vendor marketplace for Punjab’s GI-certified handicrafts.', tags: 'React.js · Node.js · PostgreSQL' },
+      { title: 'CallSharp.ai', href: '#work', text: 'AI voice receptionist that answers calls, qualifies jobs and books appointments.', tags: 'Next.js · Supabase · Vapi · GPT-4o-mini · Twilio' },
+      { title: 'Sanatzar.cloud', href: '#work', text: 'Multi-vendor marketplace for Punjab’s GI-certified handicrafts.', tags: 'React · Express · PostgreSQL · Drizzle' },
       { title: 'Client web apps', text: 'Responsive interfaces and features shaped around real client requirements.', tags: 'React.js · Next.js · Tailwind CSS' },
     ],
   },
