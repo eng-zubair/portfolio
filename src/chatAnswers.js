@@ -17,7 +17,7 @@ export const suggestedQuestions = [
   },
   {
     q: 'What’s your tech stack?',
-    a: 'Voice AI: Vapi, OpenAI GPT-4o-mini and Twilio.\nWeb: React, Next.js, TypeScript and Tailwind CSS.\nBackend: Node.js, Express, PostgreSQL, Supabase and Drizzle ORM.\nPayments & email: Stripe and Resend.\n\nCallSharp.ai is a Next.js + TypeScript app on Supabase, with Vapi, GPT-4o-mini and Twilio for calls, Stripe for billing and Resend for email. Sanatzar.cloud, a multi-vendor marketplace, runs on React + Vite with an Express API, PostgreSQL and Drizzle ORM.',
+    a: 'Voice AI: Vapi, OpenAI GPT-4o-mini and Twilio.\nApplied AI: Google Gemini (structured output and vision) and the Claude API.\nWeb: React, Next.js, TypeScript and Tailwind CSS.\nBackend: Node.js, Express, PostgreSQL, Supabase and Drizzle ORM.\nPayments & email: Stripe and Resend.\n\nCallSharp.ai is a Next.js + TypeScript app on Supabase, with Vapi, GPT-4o-mini and Twilio for calls, Stripe for billing and Resend for email. Sanatzar.cloud, a multi-vendor marketplace, runs on React + Vite with an Express API, PostgreSQL and Drizzle ORM. Dastarkhwan, my AI cooking assistant, is a Next.js 16 + TypeScript app using Google Gemini, tested with Vitest and Playwright.',
   },
   {
     q: 'How much does a project cost?',

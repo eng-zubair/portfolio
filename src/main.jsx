@@ -98,7 +98,7 @@ function About() {
 
 function Projects() {
   return <section className="work-section" id="work"><div className="section-wrap work-inner">
-    <Reveal><SectionHeading index="02" eyebrow="SELECTED CLIENT WORK" title={<>Good work,<br /><span className="serif-accent">real-world purpose.</span></>} detail="A look at two active client projects exploring very different sides of the web." /></Reveal>
+    <Reveal><SectionHeading index="02" eyebrow="SELECTED WORK" title={<>Good work,<br /><span className="serif-accent">real-world purpose.</span></>} detail="Two active client projects and one personal AI build, each exploring a very different side of the web." /></Reveal>
     <div className="project-grid">{projects.map((project, i) => <Reveal key={project.name} delay={i * 0.1}><article className="project-card">
       <a className={`project-art project-art-${project.color}`} href={project.url} target="_blank" rel="noreferrer" aria-label={`Visit ${project.name}`}>
         <div className="project-art-top"><span>{project.number} / SELECTED PROJECT</span><span className="project-open"><ArrowUpRight size={18} /></span></div>
@@ -110,7 +110,7 @@ function Projects() {
       <div className="project-info"><div><span className="project-type">{project.type}</span><h3><a href={project.url} target="_blank" rel="noreferrer">{project.name}<ArrowUpRight size={18} /></a></h3></div><span className="project-scope">{project.scope}</span></div>
       <p className="project-description">{project.description}</p>
       {project.stack && <ul className="project-stack" aria-label="Tech stack">{project.stack.map((s) => <li key={s}>{s}</li>)}</ul>}
-      <div className="project-divider"><span>CLIENT COLLABORATION</span><span>↗</span></div>
+      <div className="project-divider"><span>{project.personal ? 'PERSONAL BUILD' : 'CLIENT COLLABORATION'}</span><span>↗</span></div>
     </article></Reveal>)}</div>
     <CaseStudy />
     <Reveal><div className="work-note"><span className="note-star">✳</span><p>Thoughtful products begin with a simple question:<br /><em>what would make this easier for someone?</em></p></div></Reveal>

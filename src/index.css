@@ -82,6 +82,10 @@ button { font: inherit; }
 .project-art { display: block; height: 320px; position: relative; overflow: hidden; }
 .project-art-violet { background: #dad5e9; }
 .project-art-lime { background: #d5e7be; }
+.project-art-amber { background: #f0d9c2; }
+.project-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+.project-grid > :last-child:nth-child(odd) .project-shot { left: 50%; width: min(82%, 760px); transform: translateX(-50%); }
+.project-grid > :last-child:nth-child(odd) .project-art:hover .project-shot { transform: translate(-50%, -6px); }
 .project-art-top,.project-art-bottom { display: flex; justify-content: space-between; align-items: center; position: absolute; z-index: 2; left: 22px; right: 22px; color: #525b50; font: 11px var(--mono); letter-spacing: .1em; }
 .project-art-top { top: 20px; }
 .project-open { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid rgba(30,39,30,.3); border-radius: 50%; transition: background .2s,transform .2s; }

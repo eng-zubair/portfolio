@@ -34,6 +34,19 @@ export const projects = [
     color: 'lime',
     url: 'https://sanatzar.cloud',
   },
+  {
+    number: '03',
+    name: 'Dastarkhwan',
+    type: 'AI COOKING ASSISTANT · PERSONAL BUILD',
+    description: 'An AI kitchen companion that understands English, Urdu and Roman Urdu. Tell it what’s in your fridge and it finds real recipes, writes new ones when needed, and guides you through a hands-free cooking mode with timers and read-aloud steps.',
+    stack: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS 4', 'Google Gemini', 'Web Speech API', 'Vitest', 'Playwright', 'GitHub Actions', 'Vercel'],
+    image: { src: '/work/dastarkhwan-home.jpg', width: 1100, height: 688, alt: 'Dastarkhwan homepage: Aaj kya pakayein? An AI chef that understands English, Urdu and Roman Urdu' },
+    scope: 'Personal project · Live',
+    mark: 'D',
+    color: 'amber',
+    url: 'https://dastarkhwan-ai.vercel.app',
+    personal: true,
+  },
 ]
 
 export const caseStudy = {
@@ -55,9 +68,9 @@ export const caseStudy = {
 }
 
 export const skills = [
-  'Voice AI agents (Vapi)', 'OpenAI GPT-4o-mini', 'Twilio', 'React.js', 'Next.js', 'TypeScript', 'JavaScript',
+  'Voice AI agents (Vapi)', 'OpenAI GPT-4o-mini', 'Google Gemini', 'Twilio', 'React.js', 'Next.js', 'TypeScript', 'JavaScript',
   'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'Drizzle ORM', 'Stripe', 'Tailwind CSS', 'Redux', 'React Router',
-  'HTML5 & CSS3', 'Responsive design',
+  'Vitest', 'Playwright', 'HTML5 & CSS3', 'Responsive design',
 ]
 
 export const experience = [
